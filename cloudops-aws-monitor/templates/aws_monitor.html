@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AWS Server Monitor</title>
+
+<meta http-equiv="refresh" content="10">
+
+<style>
+
+body{
+background:#0f172a;
+font-family:Arial;
+color:white;
+padding:30px;
+}
+
+h1{
+text-align:center;
+}
+
+form{
+text-align:center;
+margin-bottom:30px;
+}
+
+input{
+padding:12px;
+width:350px;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.cards{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+}
+
+.online{
+color:#22c55e;
+font-weight:bold;
+}
+
+.offline{
+color:#ef4444;
+font-weight:bold;
+}
+
+.metric{
+font-size:24px;
+font-weight:bold;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>☁️ AWS Server Monitor</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="ip"
+placeholder="Enter AWS Public IP"
+required
+>
+
+<button type="submit">
+Monitor Server
+</button>
+
+</form>
+
+<div class="cards">
+
+{% for server in servers %}
+
+<div class="card">
+
+<h2>{{server.name}}</h2>
+
+<p>
+IP:
+{{server.ip}}
+</p>
+
+{% if server.status == "ONLINE" %}
+
+<p class="online">
+🟢 ONLINE
+</p>
+
+<p>
+Latency:
+{{server.latency}} ms
+</p>
+
+<div class="metric">
+CPU:
+{{server.metrics.cpu_percent}}%
+</div>
+
+<div class="metric">
+Memory:
+{{server.metrics.memory.used_percent}}%
+</div>
+
+<div class="metric">
+Disk:
+{{server.metrics.disk.used_percent}}%
+</div>
+
+<p>
+Hostname:
+{{server.metrics.hostname}}
+</p>
+
+<p>
+OS:
+{{server.metrics.os}}
+</p>
+
+{% else %}
+
+<p class="offline">
+🔴 OFFLINE
+</p>
+
+<p>
+{{server.error}}
+</p>
+
+{% endif %}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+
+</html>

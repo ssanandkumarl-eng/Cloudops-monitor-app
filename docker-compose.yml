@@ -1,0 +1,21 @@
+services:
+  agent:
+    build: ./cloudops-agent
+    container_name: cloudops-agent
+    ports:
+      - "5000:5000"
+    restart: always
+
+  dashboard:
+    build: ./cloudops-dashboard
+    container_name: cloudops-dashboard
+    ports:
+      - "8000:8000"
+    restart: always
+
+  monitor:
+    build: ./cloudops-aws-monitor
+    container_name: cloudops-aws-monitor
+    ports:
+      - "9000:9000"
+    restart: always
