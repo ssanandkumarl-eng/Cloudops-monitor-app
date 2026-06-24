@@ -23,7 +23,7 @@ def dashboard():
 
             response = requests.get(
                 f"http://{server['ip']}:5000/metrics",
-                timeout=4
+                timeout=5
             )
 
             metrics = response.json()
