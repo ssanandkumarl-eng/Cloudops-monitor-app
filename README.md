@@ -99,18 +99,18 @@ docker build -t cloudops-dashboard ./cloudops-dashboard
 ## AWS Monitor
 docker build -t cloudops-aws-monitor ./cloudops-aws-monitor
 ```
-# Run with Docker Compose
+## Run with Docker Compose
 
 ```bash
 docker compose up -d
 ```
 
-# Verify containers
+## Verify containers
 
 ```bash
 docker ps
 ```
-# stop services
+## stop services
 
 ```bash
 docker compose down
