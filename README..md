@@ -56,13 +56,34 @@ pip install -r requirements.txt
 ```
 ## Run Application Locally
 
+# Agent
 ```bash
-python app.py
+cd cloudops-agent
+
+python agent.py
+
+Open
+
+http://localhost:5000/metrics
 ```
+# Dashboard
+```bash
+cd cloudops-dashboard
 
-Open Browser:
+python app.py
 
-```text
+Open
+
+http://localhost:8000
+```
+# AWS monitor
+```bash
+cd cloudops-aws-monitor
+
+python aws_monitor.py
+
+Open
+
 http://localhost:9000
 ```
 
@@ -71,20 +92,23 @@ http://localhost:9000
 # Build Docker Image
 
 ```bash
-docker compose build
+## Agent
+docker build -t cloudops-agent ./cloudops-agent
+## Dashboard
+docker build -t cloudops-dashboard ./cloudops-dashboard
+## AWS Monitor
+docker build -t cloudops-aws-monitor ./cloudops-aws-monitor
 ```
-# start all services
+# Run with Docker Compose
 
 ```bash
 docker compose up -d
 ```
 
-# Verify Image & containers
+# Verify containers
 
 ```bash
 docker ps
-
-docker images
 ```
 # stop services
 
@@ -207,7 +231,8 @@ Just the push event
 5. Docker image is rebuilt.
 6. Existing container is removed.
 7. New container is deployed automatically.
-8. Updated application becomes available automatically.
+8. CloudOps becomes available automatically.
+9. Dashboard starts collecting live metrics from agents.
 
 ## Project screenshots
 
