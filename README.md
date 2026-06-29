@@ -55,9 +55,9 @@ cd cloudops-dashboard
 pip install -r requirements.txt
 ```
 ## Run Application Locally
-
-# Agent
 ```bash
+# Agent
+
 cd cloudops-agent
 
 python agent.py
@@ -65,9 +65,9 @@ python agent.py
 Open
 
 http://localhost:5000/metrics
-```
+
 # Dashboard
-```bash
+
 cd cloudops-dashboard
 
 python app.py
@@ -75,9 +75,9 @@ python app.py
 Open
 
 http://localhost:8000
-```
+
 # AWS monitor
-```bash
+
 cd cloudops-aws-monitor
 
 python aws_monitor.py
