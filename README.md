@@ -242,13 +242,13 @@ Just the push event
 ![Jenkins Dashboard](.github/)
 ![Build success](.github)
 ## DOCKER
-![Docker container](.github/Docker%20containers.png)
+![Docker container](.github)
 ## GITHUB
-![Github Repo](.github/GitHub%20repo.png)
+![Github Repo](.github)
 ## AWS server
-![AWS Server Dashboard](.github/AWS%20server%20Monitor.png)
+![AWS Server Dashboard](.github)
 ## Cloudops Monitor
-![Monitor](.github/Cloudops%20Monitor.png)
+![Monitor](.github)
 ## 🔍 Challenges Faced & Resolutions
 
 # Jenkins Node Offline Due to Disk Space
