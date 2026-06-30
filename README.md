@@ -46,7 +46,7 @@ Programming & Web
 
 ## 🏗️ Architecture Diagram
 
-![Architecture](.github/Architecture%20Diagram.png)
+![Architecture](.github/Screenshots/Architecture%20Diagram.png)
 ## Install Dependencies
 
 ```bash
@@ -239,20 +239,20 @@ Just the push event
 ## Project screenshots
 
 ## AWS
-![EC2-1](.github)
+![EC2-1](.github/Screenshots/AWS%20EC2.png)
 ## JENKINS
-![Jenkins Dashboard](.github)
-![Build success](.github)
-![Jenkins Trigger](.github)
+![Jenkins Dashboard](.github/Screenshots/Jenkins%20Dashboard..png)
+![Build success](.github/Screenshots/Jenkins%20Build%20Success%20(2).png)
+![Jenkins Trigger](.github/Screenshots/Jenkins%20trigger.png)
 ## DOCKER
-![Docker container](.github)
+![Docker container](.github/Screenshots/Docker%20Containers.png)
 ## GITHUB
-![Github Repo](.github)
-![Github Webhook](.github)
+![Github Repo](.github/Screenshots/Github%20Repo..png)
+![Github Webhook](.github/Screenshots/Github%20Webhook.png)
 ## AWS server
-![AWS Server Dashboard](.github)
+![AWS Server Dashboard](.github/Screenshots/AWS%20server%20Monitor.png)
 ## Cloudops Monitor
-![Monitor](.github)
+![Monitor](.github/Screenshots/Cloud%20Monitor..png)
 ## 🔍 Challenges Faced & Resolutions
 
 # Jenkins Node Offline Due to Disk Space
