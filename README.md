@@ -144,6 +144,7 @@ sudo systemctl start docker
 ## Docker compose install
 
 ```bash
+sudo apt install docker-compose-v2 -y
 docker compose version
 
 ```
