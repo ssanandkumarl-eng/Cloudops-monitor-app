@@ -239,18 +239,20 @@ Just the push event
 ## Project screenshots
 
 ## AWS
-![EC2-1](.github/AWS%20ec2.png)
+![EC2-1](.github/AWS%20EC2.png)
 ## JENKINS
-![Jenkins Dashboard](.github/)
-![Build success](.github)
+![Jenkins Dashboard](.github/Jenkins%20Dashboard..png)
+![Build success](.github/Jenkins%20Build%20Success%20(2).png)
+![Jenkins Trigger](.github/Jenkins%20trigger.png)
 ## DOCKER
-![Docker container](.github/Docker%20containers.png)
+![Docker container](.github/Docker%20Containers.png)
 ## GITHUB
-![Github Repo](.github/GitHub%20repo.png)
+![Github Repo](.github/Github%20Repo..png)
+![Github Webhook](.github/Github%20Webhook.png)
 ## AWS server
 ![AWS Server Dashboard](.github/AWS%20server%20Monitor.png)
 ## Cloudops Monitor
-![Monitor](.github/Cloudops%20Monitor.png)
+![Monitor](.github/Cloud%20Monitor..png)
 ## 🔍 Challenges Faced & Resolutions
 
 # Jenkins Node Offline Due to Disk Space
