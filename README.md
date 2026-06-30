@@ -186,21 +186,23 @@ https://github.com/ssanandkumarl-eng/Cloudops-monitor-app.git
 
 ## ⚙️ Jenkins Build Script
 
-echo "Starting Build"
+#!/bin/bash
+set -e
 
-docker stop monitoring-app || true
+cd $WORKSPACE
 
-docker rm monitoring-app || true
+echo "Stopping existing containers..."
+docker-compose down || true
 
-docker rmi monitoring-app || true
+echo "Building latest images..."
+docker-compose build
 
-docker build -t monitoring-app .
+echo "Starting containers..."
+docker-compose up -d
 
-docker run -d \
- --restart unless-stopped \
- --name monitoring-app \
- -p 5000:5000 \ 
- monitoring-app
+docker image prune -f
+
+echo "Deployment successful"
 
 ## Configure GitHub Webhook
 
